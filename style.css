@@ -1,35 +1,76 @@
+:root{
+    --primary-color: #CEEAE6;
+    --secondary-color: #291B4F;
+    --font-color: #FCD42B;
+}
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container{
     width: 100vw;
     height: 100vh;
-    background-color: black;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 2fr 2fr;
 }
 
 .sidebar{
-    background-color: yellow;
     grid-row: 1/4;
+    display: grid;
+    grid-template-rows: 1fr 2fr 3fr;
+    font-size: 1.7rem;
+}
+
+.dashboard{
+    font-size: 1.85rem;
+    margin-inline-start: 20px;
+    margin-inline-end: 50px;
+    margin-block: auto;
+}
+
+.top-dashboard > ul >li, .bottom-dashboard > ul > li{
+    margin-bottom: 10px;
+    margin-inline: 20px;
+    cursor: pointer;
+}
+
+li:hover{
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    transition: all 0.3s;
 }
 
 .navbar{
     background-color: red;
     grid-column: 2/4;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.top-navbar{
+    background-color: blue;
+    font-size: 3rem;
+}
+
+.bottom-navbar{
+    background-color: green;
 }
 
 .projects{
-    background-color: blue;
+    background-color: yellow;
     grid-row: 2/4;   
 }
 
 .announcement{
-    background: green;
+    background: orange;
 }
 
 .trending{
