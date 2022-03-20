@@ -1,7 +1,7 @@
 :root{
-    --primary-color: #CEEAE6;
-    --secondary-color: #291B4F;
-    --font-color: #FCD42B;
+    --secondary-color: #D00D11;
+    --primary-color: #F3F4F9;
+    --font-color: #545151;
 }
 
 *{
@@ -15,11 +15,11 @@
 .container{
     width: 100vw;
     height: 100vh;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-columns: 0.7fr 3fr 1fr;
+    grid-template-rows: 0.8fr 2fr 2fr 0.2fr;
+    background-color: var(--primary-color);
+    color: var(--font-color);
 }
 
 .sidebar{
@@ -27,7 +27,10 @@
     display: grid;
     grid-template-rows: 1fr 2fr 3fr;
     font-size: 1.7rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
+
 
 .dashboard{
     font-size: 1.85rem;
@@ -43,13 +46,12 @@
 }
 
 li:hover{
-    background-color: var(--secondary-color);
-    color: var(--font-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     transition: all 0.3s;
 }
 
 .navbar{
-    background-color: red;
     grid-column: 2/4;
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -64,15 +66,121 @@ li:hover{
     background-color: green;
 }
 
-.projects{
-    background-color: yellow;
-    grid-row: 2/4;   
+.announcement{
+    display: grid;
+    grid-template-rows: 0.05fr 0.5fr;
+    background-color: white;
+    color: var(--font-color);
 }
 
-.announcement{
-    background: orange;
+.announcement > p{
+    margin: 30px 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
 }
+
+.column{
+    font-size: 0.9rem;
+    background-color: var(--primary-color);
+    margin-inline: 30px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.column > div > h4{
+    padding-block: 8px;
+}
+
+
+.projects{
+    background-color: white;
+    grid-row: 2/4;   
+    display: grid;
+    grid-template-rows: 0.1fr 1fr;
+}
+
+.projects > p{
+    margin-block: auto;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    margin-inline: 30px;
+}
+
+.column-three{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.card{
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    margin-inline: 30px;
+    margin-block: 15px;
+    padding: 10px;
+}
+
+.card > h4{
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+}
+
 
 .trending{
-    background: brown
+    display: grid;
+    grid-template-rows: 0.05fr 0.5fr;
+    background-color: white;
+    color: var(--font-color);
+}
+
+.trending > p{
+    margin: 30px 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+.column-two{
+    background-color: var(--primary-color);
+    margin-inline: 30px;
+    border-radius: 8px;
+}
+
+.child{
+    display: flex;
+    margin-block: 27px;
+}
+
+.child > div > p{
+    font-size: 0.9rem;
+}
+
+.circle{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-inline: 8px;
+}
+
+.one{
+    background-color: aqua;
+}
+
+.two{
+    background-color: yellow;
+}
+
+.three{
+    background-color: grey;
+}
+
+.four{
+    background-color: pink;
+}
+.footer{
+    background-color: white;
+    grid-column: 1/4
 }
