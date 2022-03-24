@@ -1,5 +1,5 @@
 :root{
-    --secondary-color: #D00D11;
+    --secondary-color: #f14f52;
     --primary-color: #F3F4F9;
     --font-color: #545151;
 }
@@ -18,7 +18,6 @@
     display: grid;
     grid-template-columns: 0.7fr 3fr 1fr;
     grid-template-rows: 0.8fr 2fr 2fr 0.2fr;
-    background-color: var(--primary-color);
     color: var(--font-color);
 }
 
@@ -54,16 +53,109 @@ li:hover{
 .navbar{
     grid-column: 2/4;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.8fr 1fr;
+    border-bottom: 1.2px thins;
 }
 
 .top-navbar{
-    background-color: blue;
     font-size: 3rem;
+    display: grid;
+    grid-template-columns: 2fr 0.2fr 1fr;
+}
+
+.search{
+    display: flex;
+    margin-inline: 130px;
+    align-items: center;
+}
+
+.search > input{
+    width: 600px;
+    height: 40px;
+    border-radius: 20px;
+    margin-inline: 8px;
+    background-color: var(--primary-color);
+    border: none;
+    padding-inline: 10px;
+    font-size: 1rem;
+}
+
+.bell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+
+.display-picture{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(235, 235, 0);
+    padding-right: 25px;
+}
+
+.full-name{
+    font-size: 1.4rem;
+    padding-left: 25px;
 }
 
 .bottom-navbar{
-    background-color: green;
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+}
+
+.big-name{
+    display: flex;
+    align-items: center;
+    margin-inline: 130px;
+}
+
+.big-name > .display-picture {
+    width: 70px;
+    height: 70px;
+    color: --font-color;
+}
+
+.content{
+    margin-left: 15px;
+}
+
+.content :nth-child(1){
+    font-size: 1.4rem;
+}
+
+.content :nth-child(2){
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button{
+    width: 140px;
+    height: 45px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #f14f52bc;
+    transition: all 0.3s;
 }
 
 .announcement{
@@ -116,12 +208,13 @@ li:hover{
 }
 
 .card{
-    border-radius: 6px;
+    border-radius: 8px;
     background-color: var(--primary-color);
     margin-inline: 30px;
     margin-block: 15px;
     padding: 10px;
 }
+
 
 .card > h4{
     font-size: 1.6rem;
